@@ -1,28 +1,10 @@
-# La idea es hacer ésto en partes: primero, un programa que me toma una list de strings, y, según su ubicación, guarde cada string en un diccionario y le asigne un valor correspondiente. Luego, al darle otra string, comprueba si cada elemento está en el diccionario. Si está, le suma al valor el que le corresponde, si no, añade la string al diccionario.
+# Functions #
+def load_list(n):
+    """Turns a list in a text file with the items into a list with strings.
+    Items are one per line, no symbols nor numbers. In descendent order.
 
-# Último, una función, que dado un diccionario, imprime las keys basado en el orden de los values de mayor a menor.
+    n: Number of items to read from the list."""
 
-# PS: Hacer un programa que le pida al usuario ingresar una list de strings, o que la lea de un archivo de texto.
-
-# Hacer un loop que le pida al usuario si quiere ver la list de juegos, si quiere agregar una list, y si salir del mismo.
-
-# ------------------------------------------------------------- #
-
-# Funciones #
-def loads_list(n): # agregar confirmacion de si la lista está correcta y permitir rehacerla
-    print("Enter the list, one item at a time, per line.\n")
-    ls = []
-    while True:
-        loader = input()
-        ls.append(loader)
-
-        if len(ls) == n:
-            print()
-            break
-
-    return ls
-
-def loads_list2(n):
     text_list = input('Insert the name of the file to read (without the extension):\n\n')
     source = open(text_list + '.txt', 'r') # Text file with the items
     item_list = []
@@ -35,51 +17,51 @@ def loads_list2(n):
 
         if len(item_list) == n:
             break
-
     return item_list
 
-def agrega_lista(ls,dic):
-    """Dada una list de strings, guarda cada elemento en un diccionario y le asigna un valor según su ranking.
+def add_list(ls,dic):
+    """Reads a list with the items (strings) and saves them to a dictionary as keys.
+    Assigns them a score (value) based on their position, with the first item getting the length of the list, and the last one a 1 (one).
 
-    ls = list de strings.
-    dic = diccionario."""
+    ls: String list with the items.
+    dic: Dictionary in which to save the items and their score."""
 
-    ls.reverse()
+    ls.reverse() # Since the list is in descending order, this will make things easier
 
-    for i in range(len(ls)):
-        juego = ls[i]
-        if juego not in dic:
-            dic[juego] = i + 1
-        else:
-            dic[juego] += i + 1
+    for i in range(len(ls)): # Starts with the last element of the original list, now it's the first one
+        item = ls[i]
+        if item not in dic:
+            dic[item] = i + 1
+        else: # Be careful, isn't case-sensitive
+            dic[item] += i + 1
 
-def imprime_top(dic,n,t):
-    """Imprime cada elemento del top en orden de mayor puntaje a menor.
+def save_top(dic,n,t):
+    """Sorts the dictionary by value and prints the results to a text file.
 
-    dic = diccionario con los tops.
-    n = cantidad  de elementos a imprimir
-    t = string, tipo de elementos del top i.e. juegos, albumes etc"""
+    dic: Dictionary with the items and their scores.
+    n: Number of items to print.
+    t: Type of items to print (games, movies, books, etc)."""
 
-    # Algunas variables
-    fout = open('Top ' + str(n) + ' ' + str(t) + 's.txt','w')
+    # Useful stuff
+    fout = open('Top ' + str(n) + ' ' + str(t) + 's.txt','w') # Resulting top
     i = 1
     tab = "                                                                                                "
     first_line = "N°   " + t + " " * (len(tab) - len(str(t))) + "Score"
 
-    #Imprime la primeras dos líneas
+    # Prints the first two lines
     bar = "-" * len(first_line)
     fout.write(first_line)
     fout.write("\n")
     fout.write(bar)
     fout.write("\n")
 
-    # Imprime la lista en orden decreciente
-    for item in sorted(dic, key=dic.get, reverse=True):
+    # Prints the dictionary keys sorted by values
+    for item in sorted(dic, key=dic.get, reverse=True): # There's likely a more elegant way of doing this but this will be enough by now
         if i < 10:
             line = str(i) + ".   " + item + " "*(len(tab) - len(str(item))) + str(dic[item])
             fout.write(line)
             fout.write("\n")
-        elif i < 100:
+        elif i < 100: # Makes sure the items are all alligned when printed. Works up to 999 items.
             line2 = str(i) + ".  " + item + " "*(len(tab) - len(str(item))) + str(dic[item])
             fout.write(line2)
             fout.write("\n")
@@ -93,30 +75,31 @@ def imprime_top(dic,n,t):
 
         i += 1
 
-# Testeo
+# ---------------------------------------------------------------#
+# Main program #
 if __name__ == '__main__':
-    score_acum = dict()
+    score_acum = dict() # Initialize the dictionary
 
     print("Welcome to the Top Tanker!")
+    print("This simple script takes a text file with one item per line, ranked in descending order, and saves it.")
+    print("Adding more files will accumulate the items and save you a top with the highest ranked items of all lists combined.")
+    print("Please enter what type of top you're doing (Game, Album, Movie, etc) in singular:\n")
 
-    print("Please enter what kind of top you're doing (Game, Album, Movie, etc) in singular:\n")
+    type_top = input()
 
-    kind_top = input()
-
-    print("\nNow enter how many items your top will have (10, 25, 50, 100, etc):\n") 
+    print("\nNow enter how many items your top will have (make sure your text files have the same amount!):\n")
 
     num_top = int(input())
     print()
 
-    while True:
+    while True: # Juicty part
+        ls = load_list(num_top) # Loads the text file
 
-        ls = loads_list2(num_top) # Carga la lista a una string
+        add_list(ls,score_acum) # Adds items to dictionary
 
-        agrega_lista(ls,score_acum) # Agrega los elementos al diccionario
+        save_top(score_acum,num_top,type_top) # Ranks them and saves the top to a text file
 
-        imprime_top(score_acum,num_top,kind_top) # Imprime y guarda en un archivo los n elementos del diccinario en orden decreciente
-
-        choice = input('Would you like to add another list of the same kind? (y/n)\n\n')
+        choice = input('Would you like to add another list of the same kind? (y/n)\n\n') # The more the merrier!
         print('\n')
 
         if choice.lower() == 'n' or choice.lower() == 'no':
