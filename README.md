@@ -4,7 +4,7 @@ A simple, basic Python script that reads text files that contain ranked lists of
 
 At this very stage, it can only read local files, and it's terminal-based. The resulting top is saved into a text file.
 
-Output example of top 10 albums:
+Output example of top 10 albums from 6 lists:
 ```
 N°   Album                                                                                           Score
 ----------------------------------------------------------------------------------------------------------
@@ -20,3 +20,4 @@ N°   Album                                                                     
 10.  Godspeed You! Black Emperor - F# A# Infinity                                                    9
 
 ```
+As you can see, with only 6 lists and 10 albums, there isn't really much coincidence. Note that, if you choose to make a top 10 for example, the script will only load the first 10 items of your lists. I recommend taking big lists and choosing, at least, a top 50 or top 100 for better results.
