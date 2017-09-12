@@ -21,3 +21,5 @@ N°   Album                                                                     
 
 ```
 As you can see, with only 6 lists and 10 albums, there isn't really much coincidence. Note that, if you choose to make a top 10 for example, the script will only load the first 10 items of your lists. I recommend taking big lists and choosing, at least, a top 50 or top 100 for better results.
+
+PS: There are some examples of lists, just make sure to copy them on the same folder as top_ranker.py and ranker.functions.
