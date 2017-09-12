@@ -9,8 +9,6 @@ def load_list(n):
     source = open(text_list + '.txt', 'r') # Text file with the items
     item_list = []
 
-    print('\n\n')
-
     for line in source:
         item = line.strip()
         item_list.append(item)
