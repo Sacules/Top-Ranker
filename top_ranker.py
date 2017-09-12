@@ -16,15 +16,20 @@ if __name__ == '__main__':
     num_top = int(input())
     print()
 
-    while True: # Juicty part
+    print("How many lists will you load?\n")
+
+    num_lists = int(input())
+    print()
+
+    i = 0
+
+    while i < num_lists: # Juicty part
         ls = ranker_functions.load_list(num_top) # Loads the text file
 
         ranker_functions.add_list(ls,score_acum) # Adds items to dictionary
 
         ranker_functions.save_top(score_acum,num_top,type_top) # Ranks them and saves the top to a text file
 
-        choice = input('Would you like to add another list of the same kind? (y/n)\n\n') # The more the merrier!
-        print('\n')
+        i += 1
 
-        if choice.lower() == 'n' or choice.lower() == 'no':
-            break
+    print("\nFinished! The resulting top has been save into a text file.")
