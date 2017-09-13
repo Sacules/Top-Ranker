@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     i = 0
 
-    while i < num_lists: # Juicty part
+    while i < num_lists: # Juicy part
         ls = ranker_functions.load_list(num_top) # Loads the text file
 
         ranker_functions.add_list(ls,score_acum) # Adds items to dictionary
