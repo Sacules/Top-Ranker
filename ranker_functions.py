@@ -6,7 +6,7 @@ def load_list(n):
     n: Number of items to read from the list."""
 
     text_list = input('Insert the name of the file to read (without the extension):\n\n')
-    source = open(text_list + '.txt', 'r') # Text file with the items
+    source = open(text_list + '.txt',encoding='utf-8-sig') # Text file with the items
     item_list = []
 
     print()
