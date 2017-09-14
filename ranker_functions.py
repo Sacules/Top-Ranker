@@ -1,4 +1,8 @@
 # Functions #
+import re
+def titlecase(s): # Taken from the python docs, just to make sure capitalization isn't important
+	return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
+
 def load_list(n):
     """Turns a list in a text file with the items into a list with strings.
     Items are one per line, no symbols nor numbers. In descendent order.
@@ -29,7 +33,7 @@ def add_list(ls,dic):
     ls.reverse() # Since the list is in descending order, this will make things easier
 
     for i in range(len(ls)): # Starts with the last element of the original list, now it's the first one
-        item = ls[i]
+        item = titlecase(ls[i])
         if item not in dic:
             dic[item] = i + 1
         else: # Be careful, isn't case-sensitive
