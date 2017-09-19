@@ -21,6 +21,8 @@ def load_list(n):
 
         if len(item_list) == n:
             break
+
+    source.close()
     return item_list
 
 def add_list(ls,dic):
@@ -36,7 +38,7 @@ def add_list(ls,dic):
         item = titlecase(ls[i])
         if item not in dic:
             dic[item] = i + 1
-        else: # Be careful, isn't case-sensitive
+        else:
             dic[item] += i + 1
 
 def save_top(dic,n,t):
@@ -47,7 +49,7 @@ def save_top(dic,n,t):
     t: Type of items to print (games, movies, books, etc)."""
 
     # Useful stuff
-    fout = open('Top ' + str(n) + ' ' + str(t) + 's.txt','w') # Resulting top
+    fout = open('Top ' + str(n) + ' ' + str(t) + 's.txt','w',encoding='utf-8') # Resulting top
     i = 1
     tab = "                                                                                                "
     first_line = "N°   " + t + " " * (len(tab) - len(str(t))) + "Score"
@@ -75,6 +77,7 @@ def save_top(dic,n,t):
             fout.write("\n")
 
         if i == n:
-            break
+                fout.close()
+                break
 
         i += 1

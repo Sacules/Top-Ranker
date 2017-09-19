@@ -4,7 +4,7 @@ import ranker_functions
 if __name__ == '__main__':
     score_acum = dict() # Initialize the dictionary
 
-    print("Welcome to the Top Tanker!")
+    print("Welcome to the Top Ranker!")
     print("This simple script takes a text file with one item per line, ranked in descending order, and saves it.")
     print("Adding more files will accumulate the items and save you a top with the highest ranked items of all lists combined.")
     print("Please enter what type of top you're doing (Game, Album, Movie, etc) in singular:\n")
@@ -32,4 +32,16 @@ if __name__ == '__main__':
 
         i += 1
 
-    print("\nFinished! The resulting top has been save into a text file.")
+    print("\nFinished! The resulting top has been save into a text file.\n")
+
+    while True:
+        print_dict = input('Wanna print the whole list by name order? Useful for checking spelling etc.(y/n):\n')
+
+        if print_dict.lower() == 'y' or print_dict.lower() == 'yes':
+            for item in sorted(score_acum):
+                print(item)
+
+            break
+
+        else:
+            break
