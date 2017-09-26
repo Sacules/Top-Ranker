@@ -11,27 +11,27 @@ N°   Album                                                                     
 9.   Anathema - Weather Systems                                                                      228
 10.  King Crimson - In The Court Of The Crimson King                                                 217
 11.  Haken - The Mountain                                                                            200
-12.  Burial - Untrue                                                                                 192
-13.  Aesop Rock - The Impossible Kid                                                                 192
+12.  Aesop Rock - The Impossible Kid                                                                 192
+13.  Burial - Untrue                                                                                 192
 14.  Porcupine Tree - Fear Of A Blank Planet                                                         188
-15.  Massive Attack - Mezzanine                                                                      187
-16.  Mr. Bungle - California                                                                         187
+15.  Mr. Bungle - California                                                                         187
+16.  Massive Attack - Mezzanine                                                                      187
 17.  Steven Wilson - The Raven That Refused To Sing (And Other Stories)                              184
-18.  Dream Theater - Six Degrees Of Inner Turbulence                                                 177
-19.  Kashiwa Daisuke - Program Music I                                                               177
+18.  Kashiwa Daisuke - Program Music I                                                               177
+19.  Dream Theater - Six Degrees Of Inner Turbulence                                                 177
 20.  Unexpect - Fables Of The Sleepless Empire                                                       175
 21.  Alter Bridge - Blackbird                                                                        172
 22.  Bent Knee - Shiny Eyed Babies                                                                   171
-23.  Steve Reich - Phases                                                                            170
-24.  Between The Buried And Me - Colors                                                              170
+23.  Between The Buried And Me - Colors                                                              170
+24.  Steve Reich - Phases                                                                            170
 25.  Have A Nice Life - Deathconsciousness                                                           168
 26.  Shinning - Blackjazz                                                                            163
 27.  Persefone - Spiritual Migration                                                                 163
 28.  Bjork - Homogenic                                                                               162
 29.  Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas To Heaven                    161
 30.  Death Grips - The Money Store                                                                   161
-31.  Portishead - Dummy                                                                              159
-32.  Swans - To Be Kind                                                                              159
+31.  Swans - To Be Kind                                                                              159
+32.  Portishead - Dummy                                                                              159
 33.  Nils Frahm - Spaces                                                                             158
 34.  Opeth - Ghost Reveries                                                                          157
 35.  Porcupine Tree - In Absentia                                                                    152
@@ -40,8 +40,8 @@ N°   Album                                                                     
 38.  Katatonia - The Great Cold Distance                                                             144
 39.  Pink Floyd - The Dark Side Of The Moon                                                          143
 40.  Blackfield - Blackfield 2                                                                       142
-41.  Janelle Monae - The Archandroid                                                                 138
-42.  Kairon; Irse! - Ujubasajuba                                                                     138
+41.  Kairon; Irse! - Ujubasajuba                                                                     138
+42.  Janelle Monae - The Archandroid                                                                 138
 43.  Saltillo - Ganglion                                                                             136
 44.  The Mars Volta - De-Loused In The Comatorium                                                    135
 45.  Nine Inch Nails - The Fragile                                                                   134
@@ -56,47 +56,47 @@ N°   Album                                                                     
 54.  David Maxim Micic - Bilo 3.0                                                                    123
 55.  Silver Mt. Zion - He Has Left Us Alone...                                                       122
 56.  So Hideous - Laurestine                                                                         122
-57.  Converge - Jane Doe                                                                             121
-58.  Gorillaz - Demon Days                                                                           121
-59.  Nine Inch Nails - The Downward Spiral                                                           121
+57.  Nine Inch Nails - The Downward Spiral                                                           121
+58.  Converge - Jane Doe                                                                             121
+59.  Gorillaz - Demon Days                                                                           121
 60.  Steven Wilson - Grace For Drowning                                                              119
 61.  Darren Korb - Transistor Original Soundtrack                                                    117
 62.  Sigur RóS - Agaetis Byrjun                                                                      113
 63.  Underworld - Beaucoup Fish                                                                      112
-64.  Obscure Sphinx - Void Mother                                                                    109
-65.  Nine Inch Nails - Hesitation Marks                                                              109
-66.  Fishmans - Long Season                                                                          109
+64.  Fishmans - Long Season                                                                          109
+65.  Obscure Sphinx - Void Mother                                                                    109
+66.  Nine Inch Nails - Hesitation Marks                                                              109
 67.  Giles Corey - Giles Corey                                                                       107
 68.  Dream Theater - Awake                                                                           105
 69.  Vektor - Terminal Redux                                                                         103
 70.  Madvillain - Madvillainy                                                                        103
-71.  Peste Noire - L'ordure à RéTal Pur                                                              100
-72.  Dream Theater - Octavarium                                                                      100
-73.  Bjork - Vespertine                                                                              99
-74.  Jethro Tull - Thick As A Brick                                                                  99
-75.  Animal Collective - Strawberry Jam                                                              98
+71.  Dream Theater - Octavarium                                                                      100
+72.  Peste Noire - L'ordure à RéTal Pur                                                              100
+73.  Jethro Tull - Thick As A Brick                                                                  99
+74.  Bjork - Vespertine                                                                              99
+75.  Burzum - Filosofem                                                                              98
 76.  The Enid - The Bridge Show                                                                      98
 77.  Leprous - Bilateral                                                                             98
-78.  Burzum - Filosofem                                                                              98
-79.  Anathema - Distant Satellites                                                                   97
-80.  Anubis - A Tower Of Silence                                                                     97
-81.  Mgmt - Congratulations                                                                          97
-82.  My Bloody Valentine - Loveless                                                                  96
-83.  Maudlin Of The Well - Bath                                                                      96
-84.  Melt-Banana - Fetch                                                                             96
-85.  Koji Kondo - Super Mario 64 Ost                                                                 96
-86.  Lemon Demon - Spirit Phone                                                                      96
-87.  Comus - First Utterance                                                                         96
+78.  Animal Collective - Strawberry Jam                                                              98
+79.  Anubis - A Tower Of Silence                                                                     97
+80.  Mgmt - Congratulations                                                                          97
+81.  Anathema - Distant Satellites                                                                   97
+82.  Lemon Demon - Spirit Phone                                                                      96
+83.  Koji Kondo - Super Mario 64 Ost                                                                 96
+84.  Maudlin Of The Well - Bath                                                                      96
+85.  My Bloody Valentine - Loveless                                                                  96
+86.  Comus - First Utterance                                                                         96
+87.  Melt-Banana - Fetch                                                                             96
 88.  Akira Yamaoka - Silent Hill 3 Ost                                                               95
-89.  Death Grips - The Powers That B: Niggas On The Moon                                             94
-90.  Soutaiseiriron - Hi-Fi Anatomia                                                                 94
-91.  Mastodon - Crack The Skye                                                                       93
-92.  Preoccupations - Preoccupations                                                                 93
+89.  Soutaiseiriron - Hi-Fi Anatomia                                                                 94
+90.  Death Grips - The Powers That B: Niggas On The Moon                                             94
+91.  Maudlin Of The Well - Part The Second                                                           93
+92.  Mastodon - Crack The Skye                                                                       93
 93.  2814 - 2814                                                                                     93
-94.  Maudlin Of The Well - Part The Second                                                           93
-95.  Coheed And Cambria - The Afterman: Ascension                                                    92
-96.  Mono - Hymn To The Immortal Wind                                                                92
+94.  Preoccupations - Preoccupations                                                                 93
+95.  Mono - Hymn To The Immortal Wind                                                                92
+96.  Coheed And Cambria - The Afterman: Ascension                                                    92
 97.  Liquid Tension Experiment - Liquid Tension Experiment 2                                         92
 98.  Death Grips - The Powers That B                                                                 91
-99.  Everything Everything - Man Alive                                                               91
-100. Slice The Cake - Oddyssey To The West                                                           91
+99.  Slice The Cake - Oddyssey To The West                                                           91
+100. Swans - The Seer                                                                                91
