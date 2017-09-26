@@ -10,19 +10,19 @@ def load_list(n):
     n: Number of items to read from the list."""
 
     text_list = input('Insert the name of the file to read (without the extension):\n\n')
-    source = open(text_list + '.txt',encoding='utf-8-sig') # Text file with the items
-    item_list = []
+    
+    with open(text_list + '.txt',encoding='utf-8-sig') as source: # Text file with the items
+        item_list = []  # Temporary list
 
-    print()
+        print()
 
-    for line in source:
-        item = line.strip()
-        item_list.append(item)
+        for line in source:
+            item = line.strip()
+            item_list.append(item)
 
-        if len(item_list) == n:
-            break
+            if len(item_list) == n:
+                break
 
-    source.close()
     return item_list
 
 def add_list(ls,dic):
@@ -41,6 +41,9 @@ def add_list(ls,dic):
         else:
             dic[item] += i + 1
 
+def item_line(tab,item,dic,i,n):
+    return str(i) + "."+ " "*n + item + " "*(len(tab) - len(str(item))) + str(dic[item])
+
 def save_top(dic,n,t):
     """Sorts the dictionary by value and prints the results to a text file.
 
@@ -49,35 +52,32 @@ def save_top(dic,n,t):
     t: Type of items to print (games, movies, books, etc)."""
 
     # Useful stuff
-    fout = open('Top ' + str(n) + ' ' + str(t) + 's.txt','w',encoding='utf-8') # Resulting top
-    i = 1
-    tab = "                                                                                                "
-    first_line = "N°   " + t + " " * (len(tab) - len(str(t))) + "Score"
+    with open('Top ' + str(n) + ' ' + str(t) + 's.txt','w',encoding='utf-8') as fout:# Resulting top
+        i = 1
+        tab = "                                                                                                "
+        first_line = "N°   " + t + " " * (len(tab) - len(str(t))) + "Score"
+        
+        # Prints the first two lines
+        bar = "-" * len(first_line)
+        fout.write(first_line)
+        fout.write("\n")
+        fout.write(bar)
+        fout.write("\n")
 
-    # Prints the first two lines
-    bar = "-" * len(first_line)
-    fout.write(first_line)
-    fout.write("\n")
-    fout.write(bar)
-    fout.write("\n")
+        # Prints the dictionary keys sorted by values
+        for item in sorted(dic, key=dic.get, reverse=True):
+            if i < 10:
+                fout.write(item_line(tab,item,dic,i,3))
+                fout.write("\n")
+            elif i < 100: # Makes sure the items are all alligned when printed. Works up to 999 items.
+                fout.write(item_line(tab,item,dic,i,2))
+                fout.write("\n")
+            else:
+                fout.write(item_line(tab,item,dic,i,1))
+                fout.write("\n")
 
-    # Prints the dictionary keys sorted by values
-    for item in sorted(dic, key=dic.get, reverse=True): # There's likely a more elegant way of doing this but this will be enough by now
-        if i < 10:
-            line = str(i) + ".   " + item + " "*(len(tab) - len(str(item))) + str(dic[item])
-            fout.write(line)
-            fout.write("\n")
-        elif i < 100: # Makes sure the items are all alligned when printed. Works up to 999 items.
-            line2 = str(i) + ".  " + item + " "*(len(tab) - len(str(item))) + str(dic[item])
-            fout.write(line2)
-            fout.write("\n")
-        else:
-            line3 = str(i) + ". " + item + " "*(len(tab) - len(str(item))) + str(dic[item])
-            fout.write(line3)
-            fout.write("\n")
+            if i == n:
+                    fout.close()
+                    break
 
-        if i == n:
-                fout.close()
-                break
-
-        i += 1
+            i += 1
