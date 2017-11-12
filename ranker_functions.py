@@ -1,7 +1,7 @@
 # Functions #
 import re
 def titlecase(s): # Taken from the python docs, just to make sure capitalization isn't important
-	return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
+    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
 
 def load_list(n):
     """Turns a list in a text file with the items into a list with strings.
