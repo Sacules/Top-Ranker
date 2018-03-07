@@ -5,6 +5,7 @@ def titlecase(s): # Taken from the python docs, just to make sure capitalization
                   lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(), 
                   s)
 
+
 def load_list(n):
     """Turns a list in a text file with the items into a list with strings.
     Items are one per line, no symbols nor numbers. In descendent order.
@@ -28,9 +29,11 @@ def load_list(n):
 
     return item_list
 
-def add_list(ls,dic):
+
+def add_list(ls, dic):
     """Reads a list with the items (strings) and saves them to a dictionary as keys.
-    Assigns them a score (value) based on their position, with the first item getting the length of the list, and the last one a 1 (one).
+    Assigns them a score (value) based on their position, with the first item getting
+    the length of the list, and the last one a 1 (one).
 
     ls: String list with the items.
     dic: Dictionary in which to save the items and their score."""
@@ -38,14 +41,34 @@ def add_list(ls,dic):
     ls.reverse() # Since the list is in descending order, this will make things easier
 
     for i in range(len(ls)): # Starts with the last element of the original list, now it's the first one
+
         item = titlecase(ls[i])
+        
         if item not in dic:
             dic[item] = i + 1
+            
         else:
             dic[item] += i + 1
 
+
+def add_list_no_order(ls, dic):
+    """Same as the other one but for lists that are in no particular order.
+    Assigns each item 1 (one) point."""
+
+    for i in range(len(ls)):
+        
+        item = titlecase(ls[i])
+
+        if item not in dic:
+            dic[item] = 1
+
+        else:
+            dic[item] += 1
+
+
 def item_line(tab,item,dic,i,n):
     return str(i) + "."+ " "*n + item + " "*(len(tab) - len(str(item))) + str(dic[item])
+
 
 def save_top(dic,n,t):
     """Sorts the dictionary by value and prints the results to a text file.

@@ -14,21 +14,30 @@ if __name__ == '__main__':
     print("\nNow enter how many items your top will have (make sure your text files have the same amount!):\n")
 
     num_top = int(input())
-    print()
-
-    print("How many lists will you load?\n")
+    
+    print("\nHow many lists will you load?\n")
 
     num_lists = int(input())
     print()
 
     i = 0
 
-    while i < num_lists: # Juicy part
+    # Juicy part
+    while i < num_lists:
         ls = ranker_functions.load_list(num_top) # Loads the text file
 
-        ranker_functions.add_list(ls,score_acum) # Adds items to dictionary
+        order = input("\nIs your list in order? (y/n):\n")
 
-        ranker_functions.save_top(score_acum,num_top,type_top) # Ranks them and saves the top to a text file
+        order.lower()
+        
+        if order == 'y' or order == 'yes':
+            ranker_functions.add_list(ls, score_acum) # Adds items to dictionary
+
+        else:
+            ranker_functions.add_list_no_order(ls, score_acum) # Adds items to dictionary
+            
+
+        ranker_functions.save_top(score_acum, num_top, type_top) # Ranks them and saves the top to a text file
 
         i += 1
 
