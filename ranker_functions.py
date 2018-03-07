@@ -1,7 +1,9 @@
 # Functions #
 import re
 def titlecase(s): # Taken from the python docs, just to make sure capitalization isn't important
-    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(),s)
+    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?", 
+                  lambda mo:  mo.group(0)[0].upper() + mo.group(0)[1:].lower(), 
+                  s)
 
 def load_list(n):
     """Turns a list in a text file with the items into a list with strings.
@@ -11,7 +13,8 @@ def load_list(n):
 
     text_list = input('Insert the name of the file to read (without the extension):\n\n')
     
-    with open(text_list + '.txt',encoding='utf-8-sig') as source: # Text file with the items
+    # Text file with the items
+    with open(text_list + '.txt', encoding='utf-8-sig') as source:
         item_list = []  # Temporary list
 
         print()
@@ -51,11 +54,12 @@ def save_top(dic,n,t):
     n: Number of items to print.
     t: Type of items to print (games, movies, books, etc)."""
 
-    # Useful stuff
-    with open('Top ' + str(n) + ' ' + str(t) + 's.txt','w',encoding='utf-8') as fout:# Resulting top
+    # Resulting top
+    with open('Top ' + str(n) + ' ' + str(t) + 's.txt','w', encoding='utf-8') as fout:
+        # Useful stuff
         i = 1
         tab = "                                                                                                "
-        first_line = "NÂ°   " + t + " " * (len(tab) - len(str(t))) + "Score"
+        first_line = "N°   " + t + " " * (len(tab) - len(str(t))) + "Score"
         
         # Prints the first two lines
         bar = "-" * len(first_line)
